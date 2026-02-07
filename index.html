@@ -1,13 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Age Calculator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎂 Age Calculator</h1>
+      <p class="subtitle">
+        Calculate your exact age in years, months, and days
+      </p>
+
+      <div class="input-group">
+        <label>Enter Your Date of Birth</label>
+        <div class="input-labels">
+          <span>Day</span>
+          <span>Month</span>
+          <span>Year</span>
+        </div>
+        <div class="date-inputs">
+          <input type="number" id="day" placeholder="DD" min="1" max="31" />
+          <input type="number" id="month" placeholder="MM" min="1" max="12" />
+          <input
+            type="number"
+            id="year"
+            placeholder="YYYY"
+            min="1900"
+            max="2026"
+          />
+        </div>
+      </div>
+
+      <button class="btn-calculate" onclick="calculateAge()">
+        Calculate Age
+      </button>
+
+      <div class="error" id="error"></div>
+
+      <div class="result" id="result">
+        <h2>Your Age</h2>
+        <div class="age-details">
+          <div class="age-box">
+            <span class="age-number" id="years">0</span>
+            <span class="age-label">Years</span>
+          </div>
+          <div class="age-box">
+            <span class="age-number" id="months">0</span>
+            <span class="age-label">Months</span>
+          </div>
+          <div class="age-box">
+            <span class="age-number" id="days">0</span>
+            <span class="age-label">Days</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
